@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>VERIDEX</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="background-grid">
+
+<nav class="navbar">
+
+<div class="logo">
+VERIDEX
+<span>Digital Forensics Lab</span>
+</div>
+
+<div class="nav-links">
+
+{% if user.is_authenticated %}
+
+<a href="/dashboard/">Dashboard</a>
+<a href="/logout/">Logout</a>
+
+{% else %}
+
+<a href="/login/">Login</a>
+<a href="/register/">Register</a>
+
+{% endif %}
+
+</div>
+
+</nav>
+
+<div class="main-content">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+</div>
+
+</body>
+</html>
