@@ -4,23 +4,30 @@
 
 <div class="auth-box">
 
-<h2>SYSTEM LOGIN</h2>
+  <h2>SYSTEM LOGIN</h2>
+  <div class="auth-accent-line"></div>
 
-<form method="POST">
+  <form method="POST">
 
-{% csrf_token %}
+    {% csrf_token %}
 
-<input type="text" name="username" placeholder="Username">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username">
+    </div>
 
-<input type="password" name="password" placeholder="Password">
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+    </div>
 
-<button type="submit">ACCESS SYSTEM</button>
+    <button type="submit">Access System</button>
 
-</form>
+  </form>
 
-<p>New User?</p>
-
-<a href="/register/">Request Access</a>
+  <p class="auth-footer">
+    New user? <a href="/register/">Request Access</a>
+  </p>
 
 </div>
 

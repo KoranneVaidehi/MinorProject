@@ -4,15 +4,29 @@
 
 <div class="dashboard">
 
-<h1>DETECT MANIPULATED MEDIA</h1>
+  <span class="dash-badge">⬡ Forensics Dashboard</span>
 
-<p>Welcome {{user.username}}</p>
+  <h1>Detect <span>Manipulated</span> Media</h1>
 
-<a href="/upload/">
-<button>Upload Photo / Video</button>
-</a>
+  <p class="dash-desc">
+    Upload a photo or video to run AI-powered deepfake and face manipulation analysis.
+  </p>
 
-<a href="/logout/">Logout</a>
+  <p class="dash-welcome">
+    Logged in as <strong>{{ user.username }}</strong>
+  </p>
+
+  <div class="dash-actions">
+
+    <a href="/upload/">
+      <button class="btn-primary">Upload Photo / Video</button>
+    </a>
+
+    <a href="/logout/">
+      <button class="btn-ghost">Logout</button>
+    </a>
+
+  </div>
 
 </div>
 

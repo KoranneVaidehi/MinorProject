@@ -2,20 +2,37 @@
 
 {% block content %}
 
-<h2>Upload Photo or Video</h2>
+<div class="upload-box">
 
-<form method="POST" enctype="multipart/form-data">
+  <h2>Upload Media</h2>
+  <div class="accent-line"></div>
 
-{% csrf_token %}
+  <form method="POST" enctype="multipart/form-data">
 
-<input type="file" name="file">
+    {% csrf_token %}
 
-<button type="submit">Upload</button>
+    <div class="upload-area" onclick="document.getElementById('fileInput').click()">
 
-</form>
+      <div class="upload-icon">📂</div>
+      <p>Click to select a photo or video file</p>
 
-{% if msg %}
-<p>{{msg}}</p>
-{% endif %}
+      <span class="file-label">Browse Files</span>
+
+      <input type="file" id="fileInput" name="file"
+             onchange="document.getElementById('fileName').textContent = this.files[0]?.name || ''">
+
+    </div>
+
+    <p class="selected-file" id="fileName"></p>
+
+    <button type="submit">Analyse File</button>
+
+  </form>
+
+  {% if msg %}
+    <p class="upload-msg">{{ msg }}</p>
+  {% endif %}
+
+</div>
 
 {% endblock %}

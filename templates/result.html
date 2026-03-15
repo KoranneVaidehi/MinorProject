@@ -2,12 +2,24 @@
 
 {% block content %}
 
-<h2>Face Detection Result</h2>
+<div class="result-box">
 
-<img src="{{media.file.url}}" width="300">
+  <h2>Analysis Result</h2>
+  <div class="accent-line"></div>
 
-<h3>Faces Detected: {{faces}}</h3>
+  <div class="result-media">
+    <img src="{{ media.file.url }}" alt="Analysed media">
+  </div>
 
-<a href="/dashboard/">Back</a>
+  <div class="result-stat">
+    <div>
+      <div class="stat-label">Faces Detected</div>
+      <div class="stat-value">{{ faces }}</div>
+    </div>
+  </div>
+
+  <a href="/dashboard/" class="btn-back">← Back to Dashboard</a>
+
+</div>
 
 {% endblock %}
