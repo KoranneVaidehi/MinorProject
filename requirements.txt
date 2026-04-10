@@ -4,3 +4,9 @@ mtcnn==0.1.1
 Pillow==10.1.0
 numpy==1.24.3
 tensorflow==2.13.0
+
+
+
+#pip install -r requirements.txt
+#activate the venv :   .\.venv\Scripts\Activate
+#run python manage.py runserver

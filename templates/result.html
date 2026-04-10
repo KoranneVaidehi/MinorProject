@@ -7,10 +7,21 @@
   <h2>Analysis Result</h2>
   <div class="accent-line"></div>
 
+  <!--  Original Media -->
   <div class="result-media">
-    <img src="{{ media.file.url }}" alt="Analysed media">
+    <h3>Original</h3>
+    <img src="{{ media.file.url }}" alt="Original media">
   </div>
 
+  <!--  Heatmap Result -->
+  {% if heatmap %}
+  <div class="result-media">
+    <h3>Face Detection Heatmap</h3>
+    <img src="{{ heatmap }}" alt="Heatmap Result">
+  </div>
+  {% endif %}
+
+  <!-- Stats -->
   <div class="result-stat">
     <div>
       <div class="stat-label">Faces Detected</div>
