@@ -68,7 +68,7 @@ def dashboard(request):
 #  Logout
 def logout_view(request):
     logout(request)
-    return redirect("login")
+    return redirect("/")
 
 
 #  Upload + Face Detection
